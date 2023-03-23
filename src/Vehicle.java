@@ -12,4 +12,24 @@ public class Vehicle {
     public double calculateTollPrice() {
         return tollFee * passengers;
     }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public double getTollFee() {
+        return tollFee;
+    }
+
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int newPassengers) {
+        passengers = newPassengers;
+    }
+
+    public void setTollFee(double newTollFee) {
+        tollFee = newTollFee;
+    }
 }
