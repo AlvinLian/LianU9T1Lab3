@@ -32,4 +32,12 @@ public class Vehicle {
     public void setTollFee(double newTollFee) {
         tollFee = newTollFee;
     }
+
+    public void printInfo() {
+        System.out.println("License Plate: " + licensePlate);
+        System.out.println("Toll fee: " + tollFee);
+        System.out.println("Passengers: " + passengers);
+    }
+
+    public v
 }
