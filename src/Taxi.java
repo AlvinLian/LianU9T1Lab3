@@ -1,8 +1,8 @@
 public class Taxi extends Car{
     private double fareCollected;
 
-    public Taxi(String licensePlate, double tollFee, int passengers, boolean electric, double fareCollected) {
-        super(licensePlate, tollFee, passengers, electric);
+    public Taxi(String licensePlate, double tollFee, int passengers, int loadCapacityInLbs, boolean electric, double fareCollected) {
+        super(licensePlate, tollFee, passengers, loadCapacityInLbs, electric);
         this.fareCollected = fareCollected;
     }
 
@@ -34,6 +34,15 @@ public class Taxi extends Car{
     public boolean chargeAndDropOffRiders(double farePerRider) {
         fareCollected += (getPassengers() - 1) * farePerRider;
         return dropOffPassengers(getPassengers() - 1);
+    }
+
+    @Override
+    public boolean isTooHeavy(int weight) {
+        if(weight > getLoadCapacityInLbs() / 2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 

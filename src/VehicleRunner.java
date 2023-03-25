@@ -141,7 +141,7 @@ public class VehicleRunner {
         Truck testTruck6 = new Truck("7645PX", 10.50, 3, 7, false);
         validLicensePlate = testTruck6.validateLicensePlate();
         System.out.println(validLicensePlate);
-**/
+
         Car myCar = new Car("MK4567", 10.0, 3, true);
         System.out.println(myCar.calculateTollPrice());
 
@@ -170,5 +170,18 @@ public class VehicleRunner {
         System.out.println(success); // should be true
         System.out.println(myTaxi3.getPassengers()); // should now be 1
         System.out.println(myTaxi3.getFareCollected()); // should be 17.50
+ **/
+
+        Vehicle myVehicle = new Vehicle("TR97", 10.0, 6, 850);
+        System.out.println(myVehicle.isTooHeavy(myVehicle.getLoadCapacityInLbs()));
+
+        Car myCar = new Car("FJ8761", 10.0, 6, 850, false);
+        System.out.println(myCar.isTooHeavy(myCar.getLoadCapacityInLbs()));
+
+        Truck myTruck = new Truck("TN1297", 10.0, 6, 850, 7, true);
+        System.out.println(myTruck.isTooHeavy(myTruck.getLoadCapacityInLbs()));
+
+        Taxi myTaxi = new Taxi("LO927", 10.0, 6, 850, false, 50);
+        System.out.println(myTaxi.isTooHeavy(myTaxi.getLoadCapacityInLbs()));
 }
 }

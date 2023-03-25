@@ -2,11 +2,13 @@ public class Vehicle {
     private String licensePlate;
     private double tollFee;
     private int passengers;
+    private int loadCapacityInLbs;
 
-    public Vehicle(String licensePlate, double tollFee, int passengers) {
+    public Vehicle(String licensePlate, double tollFee, int passengers, int loadCapacityInLbs) {
         this.licensePlate = licensePlate;
         this.tollFee = tollFee;
         this.passengers = passengers;
+        this.loadCapacityInLbs = loadCapacityInLbs;
     }
 
     public double calculateTollPrice() {
@@ -24,6 +26,9 @@ public class Vehicle {
     public int getPassengers() {
         return passengers;
     }
+    public int getLoadCapacityInLbs() {
+        return loadCapacityInLbs;
+    }
 
     public void setPassengers(int newPassengers) {
         passengers = newPassengers;
@@ -39,5 +44,11 @@ public class Vehicle {
         System.out.println("Passengers: " + passengers);
     }
 
-    public v
+    public boolean isTooHeavy(int weight) {
+        if(weight > loadCapacityInLbs) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

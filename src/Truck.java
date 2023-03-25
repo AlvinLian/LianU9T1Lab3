@@ -2,8 +2,8 @@ public class Truck extends Vehicle {
     private int axles;
     private boolean hasTrailer;
 
-    public Truck(String licensePlate, double tollFee, int passengers, int axles, boolean hasTrailer) {
-        super(licensePlate, tollFee, passengers);
+    public Truck(String licensePlate, double tollFee, int passengers, int loadCapacityInLbs, int axles, boolean hasTrailer) {
+        super(licensePlate, tollFee, passengers,loadCapacityInLbs);
         this.axles = axles;
         this.hasTrailer = hasTrailer;
     }
